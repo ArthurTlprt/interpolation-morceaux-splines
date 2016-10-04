@@ -1,6 +1,6 @@
 function image = interp_hermite(P0, P1, T0, T1, t)
 
-U = []
+S = [t^3, t^2, t, 1];
 
 A = [
   2, -2, 1, 1;
@@ -10,10 +10,12 @@ A = [
 ];
 
 B = [
-  P0;
-  P1;
-  T0;
-  T1
-]
+  P0(2);
+  P1(2);
+  T0(2);
+  T1(2)
+];
+
+image = S*A*B;
 
 endfunction
