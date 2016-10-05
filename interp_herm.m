@@ -4,4 +4,4 @@ T0 = [-180, 400];
 T1 = [-5, 100];
 
 
- y = interp_hermite(P0, P1, T0, T1, 100)
+plot_hermite(@hermite, P0, P1, T0, T1, [50, 150])
