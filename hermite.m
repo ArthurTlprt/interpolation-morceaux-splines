@@ -1,5 +1,4 @@
 function Pi = hermite(P0, P1, T0, T1, t)
-  Pi = [];
   % vecteur de la base polynomiale
   S = [t^3, t^2, t, 1];
   % matrice contenant les coeffs d'hermite
@@ -17,6 +16,9 @@ function Pi = hermite(P0, P1, T0, T1, t)
     T1
   ];
 
-  Pi = S*A*B;
+  Pix = S*A*B(1:end, 1);
+  Piy = S*A*B(1:end, 2);
+
+  Pi = [Pix, Piy];
 
 endfunction
