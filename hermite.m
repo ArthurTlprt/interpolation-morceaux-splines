@@ -16,6 +16,7 @@ function Pi = hermite(P0, P1, T0, T1, t)
     T1
   ];
 
+  % création de tous les points d'interpolation
   Pix = S*A*B(1:end, 1);
   Piy = S*A*B(1:end, 2);
 
